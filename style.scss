@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400&family=Roboto:wght@100;300;400&display=swap');
+
+//  colors 
+ $add-Task-color: #1d7d74;
+ $clear-Task-color: #333;
+ $shadow:rgba(0, 0, 0, .1);
+
+
+//  Reset
+*{
+  margin: 0;padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Roboto', sans-serif;
+  // to center my container
+  height: 100vh; width: 100vw;
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+  .container{
+    // Styling the big box
+    width: 90%;
+    padding: 1rem; margin: 1rem;
+    border: 1px solid rgba(0,0,0,0.2);
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.2) ;
+    border-top: $shadow;
+
+    // styling btn
+    .btn{
+      text-decoration: none;
+      color: #fff;
+      padding: .5rem 1.3rem;
+      box-shadow: 0px 3px 5px rgba(0,0,0,0.2) ;
+      
+      &-add{
+        background: #299c91;
+        
+
+      }
+      &-clear{
+        background: #333;
+        margin:1rem 0 0 -1.3rem;
+
+      }
+
+
+    }
+    
+    input{
+      
+      display: block;
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid rgba(0, 0, 0, .2);
+      padding: 1rem 0;
+      margin-bottom: 2rem;
+      &.insert:focus,&.filter{
+        outline: none;
+      }
+      
+    }
+ 
+    h1,h2{
+      margin-bottom: 1.2rem;
+    }
+
+
+
+    .line-breaker{
+      width: 100%;
+      background: rgba(0, 0, 0, .1);
+      height: .2px;
+      
+    }
+    //  styling sec1
+    #sec1{
+     
+      margin-bottom: 4rem;
+      h1{
+        font-weight: 100 ;
+    
+      }
+     
+    }
+    #sec2{
+      margin: 1.2rem;
+      h2{
+        font-weight: 400;
+      }
+      ul{
+        margin: 1rem 0;
+        li{
+          list-style: none;
+          border: 1px solid $shadow;
+          padding : 1rem .5rem;
+          position: relative;
+          .delete{
+            position: absolute;
+            right: 10px; top: 8px;
+            
+            
+           
+          
+          i.fa{
+            color: #f7c08a;
+            transition:all .5s ease-out;
+            &:hover{
+              color: red;
+            }
+            
+          }
+          }
+          
+        }
+      }
+    }
+   
+    
+  
+  }
+
+}
